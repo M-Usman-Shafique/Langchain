@@ -1,4 +1,4 @@
-## Run python3 Models/ChatModels/chatOpenAI.py
+## Run: python3 Models/ChatModels/chatOpenAI.py
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 

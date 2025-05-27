@@ -1,4 +1,4 @@
- ## Run python3 Models/ChatModels/chatAnthropic.py
+ ## Run: python3 Models/ChatModels/chatAnthropic.py
 from langchain_anthropic import ChatAnthropic
 from dotenv import load_dotenv
 
