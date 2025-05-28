@@ -17,6 +17,6 @@ docs = [
     "New York is the capital of America"
 ]
 
-result = embedding.embed_documents(docs)
+vector = embedding.embed_documents(docs)
 
-print(str(result))
+print(str(vector))

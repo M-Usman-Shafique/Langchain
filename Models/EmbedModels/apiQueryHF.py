@@ -12,6 +12,6 @@ embedding = HuggingFaceEndpointEmbeddings(
 
 )
 
-result = embedding.embed_query("Paris is the capital of France")
+vector = embedding.embed_query("Paris is the capital of France")
 
-print(str(result))
+print(str(vector))
