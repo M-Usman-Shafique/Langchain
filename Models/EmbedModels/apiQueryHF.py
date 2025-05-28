@@ -8,10 +8,9 @@ load_dotenv()
 embedding = HuggingFaceEndpointEmbeddings(
     model="sentence-transformers/all-MiniLM-L6-v2",
     task="feature-extraction",
-    huggingfacehub_api_token=os.getenv("HUGGINGFACEHUB_API_TOKEN"),
-
+    huggingfacehub_api_token=os.getenv("HUGGINGFACEHUB_API_TOKEN")
 )
 
-vector = embedding.embed_query("Paris is the capital of France")
-
+prompt = "What's the capital of France?"
+vector = embedding.embed_query(prompt)
 print(str(vector))

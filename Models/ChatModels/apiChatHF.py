@@ -12,6 +12,7 @@ llmHF = HuggingFaceEndpoint(
 )
 
 model = ChatHuggingFace(llm=llmHF)
-result = model.invoke("What's the capital of France?")
+prompt = "What's the capital of France?"
 
-print(result.content)
+response = model.invoke(prompt)
+print(response.content)

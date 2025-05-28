@@ -10,6 +10,6 @@ embedding = HuggingFaceEmbeddings(
     encode_kwargs={"normalize_embeddings": False}
 )
 
-vector = embedding.embed_query("Paris is the capital of France")
-
+prompt = "What's the capital of France?"
+vector = embedding.embed_query(prompt)
 print(str(vector))
