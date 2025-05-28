@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-model = ChatOpenAI(model="gpt-4", temperature=0.7, max_completion_tokens=10)
+model = ChatOpenAI()
 
 st.title("Summarize Tool")
 
@@ -18,12 +18,11 @@ length_input = st.selectbox( "Select Explanation Length", ["Short (1-2 paragraph
 
 template = load_prompt('template.json')
 
-prompt = template.invoke({
-    'paper_input':paper_input,
-    'style_input':style_input,
-    'length_input':length_input
-})
-
 if st.button('Summarize'):
-    response = model.invoke(prompt)
+    chain = template | model
+    response = chain.invoke({
+        'paper_input':paper_input,
+        'style_input':style_input,
+        'length_input':length_input
+    })
     st.write(response.content)
