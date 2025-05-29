@@ -1,10 +1,11 @@
 from pydantic import BaseModel
+from typing import Any
 
 class Student(BaseModel):
     name: str
-    age: int
+    age: int = 20
 
-new_student = {"name": "Ali", "age": 15}
+new_student: dict[str, Any] = {"name": "Ali"}
 
 student = Student(**new_student)
 
