@@ -24,4 +24,11 @@ python-dotenv
 # Machine Learning Utilities
 numpy
 scikit-learn
+
+# UI
 streamlit
+
+# Data validation
+pydantic
+
+# pip install -r requirements.txt
