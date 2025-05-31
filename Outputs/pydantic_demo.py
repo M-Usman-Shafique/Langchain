@@ -5,7 +5,7 @@ class Student(BaseModel):
     age: int = 18
     name: Optional[str] = None
     email: EmailStr
-    cgpa: float = Field(gt=0, lt=5)
+    cgpa: float = Field(gt=0, lt=5, default=3)
 
 new_student = {"age": 21, "email": "ali@test.com", "cgpa": 4.99}
 
