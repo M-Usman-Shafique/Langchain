@@ -1,11 +1,12 @@
-from pydantic import BaseModel
-from typing import Optional
+from pydantic import BaseModel, EmailStr
+from typing import Any, Optional
 
 class Student(BaseModel):
-    age: int = 20
+    age: int = 18
     name: Optional[str] = None
+    email: EmailStr
 
-new_student = {}
+new_student = {"age": 21, "email": "ali@test.com"}
 
 student = Student(**new_student)
 

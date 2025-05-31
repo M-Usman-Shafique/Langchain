@@ -30,5 +30,6 @@ streamlit
 
 # Data validation
 pydantic
+pydantic[email]
 
 # pip install -r requirements.txt
