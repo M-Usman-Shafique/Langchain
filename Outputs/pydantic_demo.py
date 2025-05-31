@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr, Field
-from typing import Any, Optional
+from typing import Optional
 
 class Student(BaseModel):
     age: int = 18
@@ -11,4 +11,9 @@ new_student = {"age": 21, "email": "ali@test.com", "cgpa": 4.99}
 
 student = Student(**new_student)
 
-print(student)
+# Pydantic model:
+print(student.email)
+
+# Convert to dict:
+dict_student = dict(student)
+print(dict_student["age"])
