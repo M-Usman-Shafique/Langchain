@@ -1,3 +1,4 @@
+# python3 Outputs/with_structured_output_pydantic.py
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 from typing import Optional, Literal
@@ -28,7 +29,7 @@ Insanely powerful processor (great for gaming and productivity)
 Stunning 200MP camera with incredible zoom capabilities
 Long battery life with fast charging
 S-Pen support is unique and useful
-                                 
+
 Review by John Doe
 """)
 # Direct access
