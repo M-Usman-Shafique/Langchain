@@ -21,8 +21,8 @@ parser = StrOutputParser()
 
 chain = prompt1 | model | parser | prompt2 | model | parser
 
-result = chain.invoke({'topic': 'Unemployment in India'})
+response = chain.invoke({'topic': 'Unemployment in India'})
 
-print(result)
+print(response)
 
 chain.get_graph().print_ascii()
