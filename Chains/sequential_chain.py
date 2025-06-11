@@ -19,9 +19,10 @@ model = ChatOpenAI()
 
 parser = StrOutputParser()
 
+# Pass the response of prompt1 as input to prompt2:
 chain = prompt1 | model | parser | prompt2 | model | parser
 
-response = chain.invoke({'topic': 'Unemployment in India'})
+response = chain.invoke({'topic': 'Unemployment in Pakistan'})
 
 print(response)
 

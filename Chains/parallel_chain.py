@@ -7,8 +7,13 @@ from langchain.schema.runnable import RunnableParallel
 
 load_dotenv()
 
-model1 = ChatOpenAI()
+# 1. Take a document from the user.
+# 2. Generate notes from document using a model.
+# 3. Generate quiz from document using a second model.
+# 4. Merge notes and quiz using one of our models.
+# 5. Show the merged output to the user.
 
+model1 = ChatOpenAI()
 model2 = ChatAnthropic(model_name='claude-3-7-sonnet-20250219')
 
 prompt1 = PromptTemplate(
@@ -28,6 +33,7 @@ prompt3 = PromptTemplate(
 
 parser = StrOutputParser()
 
+# For paerallel execution of chains:
 parallel_chain = RunnableParallel({
     'notes': prompt1 | model1 | parser,
     'quiz': prompt2 | model2 | parser
