@@ -33,4 +33,9 @@ streamlit
 pydantic
 pydantic[email]
 
+# Vector DB
+chromadb
+tiktoken
+pypdf
+
 # pip install -r requirements.txt
