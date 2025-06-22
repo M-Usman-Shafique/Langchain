@@ -41,6 +41,6 @@ pypdf
 # Retriever
 faiss-cpu
 wikipedia
-
+youtube-transcript-api
 
 # pip install -r requirements.txt
