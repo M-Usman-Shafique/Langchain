@@ -2,6 +2,7 @@
 langchain
 langchain-core
 langchain-community
+langchain_experimental
 
 # OpenAI Integration
 langchain-openai
@@ -42,5 +43,8 @@ pypdf
 faiss-cpu
 wikipedia
 youtube-transcript-api
+
+# Tools
+duckduckgo-search
 
 # pip install -r requirements.txt
